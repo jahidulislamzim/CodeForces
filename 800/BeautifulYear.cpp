@@ -3,28 +3,25 @@ using namespace std;
 
 int main(){
 
-    int year, temp;
+    int year;
     cin >> year;
-    temp = year;
-    bool isValid = true;
 
-    while(isValid){
-        temp += 1;
-        bool is
+    while(true){
+      year++;
 
-        if(temp > year){
-           
-            cout << temp << endl;
-            isValid = false;
-        }
-        // for(int i=0; i<4; i++){
-            
-        // }
+      int a = year / 1000;
+      int b = year / 100 % 10;
+      int c = year / 10 % 10;
+      int d = year % 10;
+
+      if(a != b && a != c && a != d && b != c && b != d && c != d){
+        break;
+      }
         
     }
 
 
-
+    cout << year << endl;
 
     return 0;
 }
